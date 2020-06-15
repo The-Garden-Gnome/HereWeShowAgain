@@ -53,7 +53,6 @@ const kata13heading = document.createElement('h1')
   mainElement.append(kata13heading)
   kata13heading.append('Kata 13: ')
 
-
 const kata14heading = document.createElement('h1')
   mainElement.append(kata14heading)
   kata14heading.append('Kata 14: ')
@@ -73,6 +72,15 @@ const kata15heading = document.createElement('h1')
   const kata18heading = document.createElement('h1')
   mainElement.append(kata18heading)
   kata18heading.append('Kata 18: ')
+
+  const kata19heading = document.createElement('h1')
+  mainElement.append(kata19heading)
+  kata19heading.append('Kata 19: ')
+
+  
+  const kata20heading = document.createElement('h1')
+  mainElement.append(kata20heading)
+  kata20heading.append('Kata 20: ')
 
 //Kata 1//
 
@@ -223,12 +231,39 @@ for(let index = 0; index <sampleArray.length; index += 1 ){
 
     // kata 18
 
-    for(let index = 0; index <sampleArray.length; index += 1 ){
-        for(let j = index +1; j<sampleArray.length; j+= 1){
-            if(sampleArray[index]<sampleArray[j]){
-                  temp = sampleArray[index];
-                  sampleArray[index] = sampleArray[j];
-                  sampleArray[j] = temp;
-          
-               }}}
+    for(let index = 0; index <sampleArray.length; index += 1 )
+        {
+            for(let j = index +1; j <sampleArray.length; j+= 1)
+                {
+                if(sampleArray[index]<sampleArray[j])
+                    {
+                    temp = sampleArray[index];
+                    sampleArray[index] = sampleArray[j];
+                    sampleArray[j] = temp;
+                    }
+                }
+        }
         kata18heading.append(sampleArray[0])
+
+    //kata 19
+
+   for(let index = 1; index <= 20; index++ ){
+    let greydiv = document.createElement('div')
+    greydiv.classList.add("greybox")
+    greydiv.innerText = index
+    greydiv.style.width = '100px';
+    kata19heading.append(greydiv)
+  }
+
+      //kata 20
+    let width = 100;
+for (let index = 1; index <= 20; index++) {
+    let greydiv = document.createElement('div');
+    greydiv.classList.add("greybox");
+    width = width + 5;
+    greydiv.style.width = String(width) + "px";
+    greydiv.innerText = width;
+    kata20heading.append(greydiv)
+}
+
+//kata 21

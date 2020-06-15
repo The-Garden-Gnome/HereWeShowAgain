@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#e5e8ee;
+    font-family: Verdana;
+    display: flex;
+    font-size: 12px;
+}
+
+.greybox {
+    height: 20px;
+    background-color: grey;
+    border: 1px solid black;
+    font-size: 9px;
+}
