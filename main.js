@@ -86,6 +86,14 @@ const kata15heading = document.createElement('h1')
   mainElement.append(kata21heading)
   kata21heading.append('Kata 21: ')
 
+  const kata22heading = document.createElement('h1')
+  mainElement.append(kata22heading)
+  kata22heading.append('Kata 22: ')
+
+  const kata23heading = document.createElement('h1')
+  mainElement.append(kata23heading)
+  kata23heading.append('Kata 23: ')
+
 //Kata 1//
 
 let counter1 = 0
@@ -287,3 +295,41 @@ for (let index = 0; index <= 19; index++) {
         kata21heading.append(greydiv)
     }
     kata21heading.append("To confirm Array: " + sampleArray + " ")
+
+    // kata 22
+    
+for (let index = 0; index <= 19; index++) {
+    if (index % 2 == 0){
+        let reddiv = document.createElement('div');
+        reddiv.classList.add("redbox");
+        reddiv.style.width = String(sampleArray[index]) + "px";
+        reddiv.innerText = sampleArray[index];
+        kata22heading.append(reddiv)
+    }
+    else {
+        let greydiv = document.createElement('div');
+        greydiv.classList.add("greybox");
+        greydiv.style.width = String(sampleArray[index]) + "px";
+        greydiv.innerText = sampleArray[index];
+        kata22heading.append(greydiv)
+    }
+}
+
+// kata 23
+
+for (let index = 0; index <= 19; index++) {
+    if (sampleArray[index] % 2 == 0){
+        let reddiv = document.createElement('div');
+        reddiv.classList.add("redbox");
+        reddiv.style.width = String(sampleArray[index]) + "px";
+        reddiv.innerText = sampleArray[index];
+        kata23heading.append(reddiv)
+    }
+    else {
+        let greydiv = document.createElement('div');
+        greydiv.classList.add("greybox");
+        greydiv.style.width = String(sampleArray[index]) + "px";
+        greydiv.innerText = sampleArray[index];
+        kata23heading.append(greydiv)
+    }
+}

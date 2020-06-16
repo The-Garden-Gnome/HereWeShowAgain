@@ -15,3 +15,10 @@ body {
     border: 1px solid black;
     font-size: 9px;
 }
+
+.redbox {
+    height: 20px;
+    background-color: red;
+    border: 1px solid black;
+    font-size: 9px;
+}
