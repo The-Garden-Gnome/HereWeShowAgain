@@ -30,7 +30,7 @@ kata7heading.append('Kata 7: ')
 mainElement.append(kata7heading)
 
 const kata8heading = document.createElement('h1')
-kata7heading.append('Kata 8: ')
+kata8heading.append('Kata 8: ')
 mainElement.append(kata8heading)
 
 const kata9heading = document.createElement('h1')
@@ -82,6 +82,10 @@ const kata15heading = document.createElement('h1')
   mainElement.append(kata20heading)
   kata20heading.append('Kata 20: ')
 
+  const kata21heading = document.createElement('h1')
+  mainElement.append(kata21heading)
+  kata21heading.append('Kata 21: ')
+
 //Kata 1//
 
 let counter1 = 0
@@ -131,19 +135,15 @@ let counter1 = 0
   }
 
   //kata 7//
-  let counter7 = 20
-  while (counter7 >= 1) {
-    if (counter7 % 2 == 0) {
-
-    }
-    counter7 -=1
-    kata7heading.append(counter7 + ', ')
-  }
+  let counter7 = 22
+ while (counter7 >= 2) {
+   counter7 -= 2
+   kata7heading.append( counter7 + ', ')
+ }
 
   //kata 8//
   let counter8 = 19
   while (counter8 >= 1) {
-
     counter8 -=2
     kata8heading.append(counter8 + ', ')
   }
@@ -165,7 +165,7 @@ let counter1 = 0
     counter10 -= 1 
   }
   //kata 11//
-  const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+  let sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
   kata11heading.append(sampleArray)
 
   //kata 12
@@ -267,3 +267,23 @@ for (let index = 1; index <= 20; index++) {
 }
 
 //kata 21
+// newWidth = 0
+// for (let index = 1; index <= 20; index++) {
+//     let greydiv = document.createElement('div');
+//     greydiv.classList.add("greybox");
+//     for (let index = 0; index < sampleArray.length; index ++) {  
+//         newWidth += sampleArray[index]
+//     greydiv.style.width = String(newWidth) + "px";
+//     greydiv.innerText = newWidth;
+//     kata21heading.append(greydiv)
+// }
+// }
+
+for (let index = 0; index <= 19; index++) {
+        let greydiv = document.createElement('div');
+        greydiv.classList.add("greybox");
+        greydiv.style.width = String(sampleArray[index]) + "px";
+        greydiv.innerText = sampleArray[index];
+        kata21heading.append(greydiv)
+    }
+    kata21heading.append("To confirm Array: " + sampleArray + " ")
